@@ -3,10 +3,12 @@
 'use strict';
 
 //Board view
-togglbutton.render('.post-it:not(.toggl)', {observe: true}, function (elem) {
+togglbutton.render('.board-card:not(.toggl)', {observe: true}, function (elem) {
   var link,
-    description = $('.heading', elem).textContent.trim(),
-    project = $('.projects .title').textContent.trim();
+    description = $('.panel-body .title', elem).textContent.trim(),
+    project = $('#board-header-title .title').textContent.trim().split('/');
+
+  project = project[project.length - 1];
 
   link = togglbutton.createTimerLink({
     className: 'zube',
@@ -15,7 +17,7 @@ togglbutton.render('.post-it:not(.toggl)', {observe: true}, function (elem) {
     buttonType: 'minimal'
   });
 
-  $('.heading', elem).insertBefore(link, $('.title', elem));
+  $('.panel-body', elem).insertBefore(link, $('.title', elem));
 });
 
 
@@ -23,18 +25,17 @@ togglbutton.render('.post-it:not(.toggl)', {observe: true}, function (elem) {
 togglbutton.render('#card-modal-view:not(.toggl)', {observe: true}, function (elem) {
   var link,
     description = $('#card-title-container .content').textContent.trim(),
-    project = $('title').textContent.split("|");
+    project = $('#board-header-title .title').textContent.trim().split('/');
 
-  project = project[project.length - 1].trim();
+  project = project[project.length - 1];
 
   link = togglbutton.createTimerLink({
     className: 'zube',
     description: description,
-    projectName: project,
-    buttonType: 'minimal'
+    projectName: project
   });
 
-  $('.modal-header', elem).insertBefore(link, $('.number', elem));
+  $('.modal-header', elem).insertBefore(link, $('.close', elem));
 });
 
 //Ticket detail view
@@ -48,7 +49,7 @@ togglbutton.render('#tickets-title-container:not(.toggl)', {observe: true}, func
 
       return "";
     },
-    project = $('.projects .title').textContent.trim().split('/');
+    project = $('#board-header-title .title').textContent.trim().split('/');
 
   project = project[project.length - 1];
 

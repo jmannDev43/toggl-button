@@ -4,8 +4,7 @@
 'use strict';
 
 togglbutton.render('.task_item .content:not(.toggl)', {observe: true}, function (elem) {
-  var link, descFunc, projectFunc, container = $('.text', elem),
-    description, project;
+  var link, descFunc, projectFunc, container = $('.text', elem);
 
   descFunc = function () {
     var clone = container.cloneNode(true),
@@ -15,9 +14,7 @@ togglbutton.render('.task_item .content:not(.toggl)', {observe: true}, function 
     while (clone.children.length > i) {
       child = clone.children[i];
       if (child.tagName === "B"
-          || child.tagName === "I"
-          || child.tagName === "STRONG"
-          || child.tagName === "EM") {
+          || child.tagName === "I") {
         i++;
       } else if (child.tagName === "A") {
         if (child.classList.contains("ex_link")
@@ -46,13 +43,10 @@ togglbutton.render('.task_item .content:not(.toggl)', {observe: true}, function 
     }
   };
 
-  description = descFunc();
-  project = projectFunc();
-
   link = togglbutton.createTimerLink({
     className: 'todoist',
-    description: description,
-    projectName: project
+    description: descFunc,
+    projectName: projectFunc
   });
 
   container.insertBefore(link, container.lastChild);

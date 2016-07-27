@@ -3,23 +3,22 @@
 
 'use strict';
 
-togglbutton.render('.issue-details .detail-page-description:not(.toggl)', {observe: true}, function (elem) {
+togglbutton.render('.issue .detail-page-description .title:not(.toggl)', {observe: true}, function (elem) {
   var link, description,
     numElem = $(".identifier"),
-    titleElem = $(".title", elem),
-    projectElem = $("h1 .project-item-select-holder");
+    titleElem = $(".issue .detail-page-description .title"),
+    projectElem = $('.title').firstChild;
 
   description = titleElem.textContent.trim();
 
   if (numElem !== null) {
-    description = numElem.innerText.split(" ").pop().trim() + " " + description;
+    description = "#" + numElem.innerText.split("#").pop().trim() + " " + description;
   }
-
   link = togglbutton.createTimerLink({
     className: 'gitlab',
     description: description,
-    projectName: projectElem.textContent
+    projectName: projectElem.textContent.split(' / ').pop().split(' · ')[0]
   });
 
-  $(".detail-page-header").appendChild(link);
+  $('.issue .detail-page-description h2.title').appendChild(link);
 });

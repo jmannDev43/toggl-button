@@ -11,7 +11,7 @@
         container = $('.task-meta-controls', elem);
 
       link = togglbutton.createTimerLink({
-        className: 'habitica',
+        className: 'habitrpg',
         description: text,
         buttonType: 'minimal'
       });
