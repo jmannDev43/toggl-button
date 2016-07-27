@@ -2,98 +2,15 @@
 
 Add Toggl one-click time tracking to popular web tools.
 
-## Compatible services
-  - [TeamWeek][2]
-  - [Pivotal tracker][3]
-  - [Github][4]
-  - [Asana][5]
-  - [Unfuddle][6]
-  - [Gitlab][7]
-  - [Trello][8]
-  - [Worksection][9]
-  - [Redbooth (old UI)][10]
-  - [Podio][11]
-  - [Basecamp][12]
-  - [JIRA (InCloud)][13]
-  - [Producteev][14]
-  - [Bitbucket][15]
-  - [Sifter][16]
-  - [Google Docs][17]
-  - [Redmine][18]
-  - [YouTrack (InCloud)][19]
-  - [CapsuleCRM][20]
-  - [Xero][21]
-  - [Zendesk][22]
-  - [Any.do][23]
-  - [Todoist][24]
-  - [Trac][25]
-  - [Wunderlist][26]
-  - [Toodledo][27]
-  - [Teamwork.com][28]
-  - [Google Mail][29]
-  - [Taiga][30]
-  - [HabitRPG][31]
-  - [Axosoft][32]
-  - [Countersoft Gemini][33]
-  - [Drupal][34]
-  - [Esa][35]
-  - [Help Scout][36]
-  - [Flow][37]
-  - [Sprintly][38]
-  - [Google Calendar][39]
-  - [TestRail][40]
-  - [Bugzilla][41]
-  - [Breeze][42]
-  - [BamBam][43]
-  - [GQueue][44]
-  - [Wrike][45]
-  - [Assembla][46]
-  - [Waffle][47]
-  - [Codeable][48]
-  - [Eventum][49]
-  - [Salesforce][50]
-  - [Draftin][51]
-  - [FogBugz][52]
-  - [Google Keep][53]
-  - [Gingko][54]
-  - [Google Inbox][55]
-  - [Wordpress][56]
-  - [Kanbanery][57]
-  - [Planbox][58]
-  - [Zoho Books][59]
-  - [Slack][60]
-  - [Doit.im][61]
-  - [Sunrise Calendar][62]
-  - [Cloudes][63]
-  - [eProject.me][64]
-  - [Freshdesk][65]
-  - [Newsletter2Go][66]
-  - [Gogs][67]
-  - [DevDocs][68]
-  - [LiquidPlanner][69]
-  - [SourceLair][70]
-  - [Remember The Milk][71]
-  - [Evernote][72]
-  - [MantisHub][73]
-  - [TargetProcess][74]
-  - [VisualStudioOnline (TFS)][75]
-  - [SmartBoard][76]
-  - [Phabricator][77]
-  - [OpenProject][78]
-  - [Zube][79]
-  - [miniCRM.pl][80]
-  - [AgenoCRM][81]
-
-## Installing from the Web Store
-
-https://chrome.google.com/webstore/detail/toggl-button/oejgccbfbmkkpaidnkphaiaecficdnfn
-
 ## Installing from Source
 
 1.  Clone the repository: `git clone git://github.com/toggl/toggl-button`
 2.  Navigate to `chrome://extensions/` and enable "Developer Mode".
 3.  Choose "Load unpacked extension..."
 4.  Open the src directory in the toggl-button directory you just cloned and follow the prompts to install.
+
+## Custom domains
+If you use a setup, where one of the supported services is on a custom domain you can customize the extension to fit your needs. Here is a step by step guide on how to [add custom domain][98] to the extension.
 
 ## Change log
 
@@ -119,8 +36,6 @@ Or start entry from the extension icon menu
   - Start another time entry inside your account.
   - Go to Toggl to stop or edit your time entry.
 
-## Custom domains
-If you use a setup, where one of the supported services is on a custom domain you can customize the extension to fit your needs. Here is a step by step guide on how to [add custom domain][98] to the extension.
 
 ## Contributing
 Want to contribute? Great! Just fork the project, make your changes and open a [Pull Request][99]
